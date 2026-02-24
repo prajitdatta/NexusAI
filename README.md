@@ -1,6 +1,5 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/sindresorhus/awesome/main/media/logo.svg" width="80" alt="NexusAI Logo"/>
 
 # 🧠 NexusAI — Your Omnipresent AI Assistant
 
