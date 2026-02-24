@@ -14,6 +14,7 @@ Run your own private AI assistant that lives everywhere you do — WhatsApp, Tel
 **Built by [Prajit Datta](https://prajitdatta.github.io/) | *MIT License***
 
 </div>
+
 ---
 
 ## What is NexusAI?
