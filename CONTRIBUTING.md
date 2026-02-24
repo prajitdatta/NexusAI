@@ -22,7 +22,7 @@ Thank you for your interest in contributing! We welcome bug fixes, new features,
 
 ## Reporting Bugs
 
-Open an issue at [github.com/yourusername/nexusai/issues](https://github.com/yourusername/nexusai/issues) with:
+Open an issue at [github.com/prajitdatta/nexusai/issues](https://github.com/prajitdatta/nexusai/issues) with:
 - NexusAI version (`nexusai --version`)
 - OS and Node.js version
 - Steps to reproduce
