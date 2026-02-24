@@ -62,7 +62,7 @@ The wizard walks you through:
 3. Installing the Gateway as a background daemon
 4. Pairing your first device
 
-Full guide → [docs.nexusai.dev/getting-started](https://docs.nexusai.dev/getting-started)
+
 
 ---
 
@@ -88,7 +88,7 @@ docker run -d \
   ghcr.io/prajitdatta/nexusai:latest
 ```
 
-Full Docker guide → [docs.nexusai.dev/install/docker](https://docs.nexusai.dev/install/docker)
+
 
 ### Build from Source
 
@@ -131,33 +131,6 @@ macOS App    iOS/Android Nodes
 
 ---
 
-## 🔗 Supported Channels
-
-### Core (built-in)
-
-| Channel | Status | Notes |
-|---|---|---|
-| [WhatsApp](https://docs.nexusai.dev/channels/whatsapp) | ✅ Stable | Via Baileys (no business account needed) |
-| [Telegram](https://docs.nexusai.dev/channels/telegram) | ✅ Stable | Bot API via grammY |
-| [Slack](https://docs.nexusai.dev/channels/slack) | ✅ Stable | Socket Mode via Bolt |
-| [Discord](https://docs.nexusai.dev/channels/discord) | ✅ Stable | discord.js, slash commands |
-| [SMS](https://docs.nexusai.dev/channels/sms) | ✅ Stable | Twilio or Signal |
-| [Email](https://docs.nexusai.dev/channels/email) | ✅ Stable | Gmail Pub/Sub or SMTP/IMAP |
-| [WebChat](https://docs.nexusai.dev/channels/webchat) | ✅ Stable | Embeddable widget |
-
-### Extension (community)
-
-| Channel | Status |
-|---|---|
-| [Microsoft Teams](https://docs.nexusai.dev/channels/msteams) | 🧪 Beta |
-| [Matrix](https://docs.nexusai.dev/channels/matrix) | 🧪 Beta |
-| [iMessage via BlueBubbles](https://docs.nexusai.dev/channels/bluebubbles) | 🧪 Beta |
-| [Google Chat](https://docs.nexusai.dev/channels/googlechat) | 🧪 Beta |
-| [Notion](https://docs.nexusai.dev/channels/notion) | 🚧 Planned |
-| [Linear](https://docs.nexusai.dev/channels/linear) | 🚧 Planned |
-
----
-
 ## 🤖 Supported AI Models
 
 NexusAI works with any OpenAI-compatible API. Recommended:
@@ -179,7 +152,6 @@ NexusAI works with any OpenAI-compatible API. Recommended:
 | [Mistral](https://mistral.ai) | Mistral Large, Codestral | Self-hostable |
 | [Ollama](https://ollama.ai) | Llama 3, Phi-3, Mistral, any GGUF | 100% local |
 
-Full model guide → [docs.nexusai.dev/concepts/models](https://docs.nexusai.dev/concepts/models)
 
 ---
 
@@ -253,7 +225,7 @@ nexusai skills list
 | `files` | Read/write files on the host machine |
 | `cron` | Schedule recurring tasks |
 
-Full skills reference → [docs.nexusai.dev/skills](https://docs.nexusai.dev/skills)
+
 
 ---
 
@@ -273,7 +245,7 @@ NexusAI connects to **real messaging surfaces** — treat all inbound messages a
 - Tailscale Funnel — public HTTPS (requires password auth)
 - SSH tunnel — manual port forwarding
 
-Full security guide → [docs.nexusai.dev/security](https://docs.nexusai.dev/security)
+
 
 ---
 
@@ -317,27 +289,6 @@ Minimal `~/.nexusai/nexusai.json`:
   }
 }
 ```
-
-Full configuration reference → [docs.nexusai.dev/configuration](https://docs.nexusai.dev/configuration)
-
----
-
-## 📖 Documentation
-
-| Resource | Link |
-|---|---|
-| Getting Started | [docs.nexusai.dev/getting-started](https://docs.nexusai.dev/getting-started) |
-| Architecture Overview | [docs.nexusai.dev/architecture](https://docs.nexusai.dev/architecture) |
-| Channel Setup Guides | [docs.nexusai.dev/channels](https://docs.nexusai.dev/channels) |
-| Skills & Plugins | [docs.nexusai.dev/skills](https://docs.nexusai.dev/skills) |
-| Configuration Reference | [docs.nexusai.dev/configuration](https://docs.nexusai.dev/configuration) |
-| Security Guide | [docs.nexusai.dev/security](https://docs.nexusai.dev/security) |
-| API Reference | [docs.nexusai.dev/api](https://docs.nexusai.dev/api) |
-| Self-Hosting on Linux | [docs.nexusai.dev/platforms/linux](https://docs.nexusai.dev/platforms/linux) |
-| Docker Deployment | [docs.nexusai.dev/install/docker](https://docs.nexusai.dev/install/docker) |
-| Troubleshooting | [docs.nexusai.dev/troubleshooting](https://docs.nexusai.dev/troubleshooting) |
-| Contributing Guide | [CONTRIBUTING.md](https://github.com/prajitdatta/nexusai/blob/main/CONTRIBUTING.md) |
-| Changelog | [CHANGELOG.md](https://github.com/prajitdatta/nexusai/blob/main/CHANGELOG.md) |
 
 ---
 
