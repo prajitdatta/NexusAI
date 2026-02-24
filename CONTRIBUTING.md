@@ -28,8 +28,4 @@ Open an issue at [github.com/prajitdatta/nexusai/issues](https://github.com/praj
 - Steps to reproduce
 - Expected vs. actual behavior
 
-## Community
-
-Join our [Discord](https://discord.gg/nexusai) to discuss ideas before opening big PRs.
-
 AI-generated or AI-assisted PRs are welcome as long as the code is reviewed and tested by the contributor. 🤖
