@@ -8,14 +8,6 @@
 
 Run your own private AI assistant that lives everywhere you do — WhatsApp, Telegram, Slack, Discord, SMS, email, and more. Powered by Claude, ChatGPT, or any LLM. Open source. Self-hosted. Yours.
 
-[![CI Status](https://img.shields.io/github/actions/workflow/status/prajitdatta/nexusai/ci.yml?branch=main&style=for-the-badge&label=CI)](https://github.com/prajitdatta/nexusai/actions)
-[![npm version](https://img.shields.io/npm/v/nexusai-assistant?style=for-the-badge&color=blue)](https://www.npmjs.com/package/nexusai-assistant)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://github.com/prajitdatta/nexusai/blob/main/LICENSE)
-[![Discord](https://img.shields.io/discord/1234567890?label=Discord&logo=discord&style=for-the-badge&color=5865F2)](https://discord.gg/nexusai)
-[![Stars](https://img.shields.io/github/stars/prajitdatta/nexusai?style=for-the-badge&color=yellow)](https://github.com/prajitdatta/nexusai/stargazers)
-
-[🌐 Website](https://nexusai.dev) · [📖 Docs](https://docs.nexusai.dev) · [🚀 Quick Start](https://docs.nexusai.dev/getting-started) · [💬 Discord](https://discord.gg/nexusai) · [🗺️ Roadmap](https://github.com/prajitdatta/nexusai/projects/1)
-
 </div>
 
 ---
