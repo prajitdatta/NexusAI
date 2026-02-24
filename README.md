@@ -8,13 +8,13 @@
 
 Run your own private AI assistant that lives everywhere you do — WhatsApp, Telegram, Slack, Discord, SMS, email, and more. Powered by Claude, ChatGPT, or any LLM. Open source. Self-hosted. Yours.
 
-[![CI Status](https://img.shields.io/github/actions/workflow/status/yourusername/nexusai/ci.yml?branch=main&style=for-the-badge&label=CI)](https://github.com/yourusername/nexusai/actions)
+[![CI Status](https://img.shields.io/github/actions/workflow/status/prajitdatta/nexusai/ci.yml?branch=main&style=for-the-badge&label=CI)](https://github.com/prajitdatta/nexusai/actions)
 [![npm version](https://img.shields.io/npm/v/nexusai-assistant?style=for-the-badge&color=blue)](https://www.npmjs.com/package/nexusai-assistant)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://github.com/yourusername/nexusai/blob/main/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://github.com/prajitdatta/nexusai/blob/main/LICENSE)
 [![Discord](https://img.shields.io/discord/1234567890?label=Discord&logo=discord&style=for-the-badge&color=5865F2)](https://discord.gg/nexusai)
-[![Stars](https://img.shields.io/github/stars/yourusername/nexusai?style=for-the-badge&color=yellow)](https://github.com/yourusername/nexusai/stargazers)
+[![Stars](https://img.shields.io/github/stars/prajitdatta/nexusai?style=for-the-badge&color=yellow)](https://github.com/prajitdatta/nexusai/stargazers)
 
-[🌐 Website](https://nexusai.dev) · [📖 Docs](https://docs.nexusai.dev) · [🚀 Quick Start](https://docs.nexusai.dev/getting-started) · [💬 Discord](https://discord.gg/nexusai) · [🗺️ Roadmap](https://github.com/yourusername/nexusai/projects/1)
+[🌐 Website](https://nexusai.dev) · [📖 Docs](https://docs.nexusai.dev) · [🚀 Quick Start](https://docs.nexusai.dev/getting-started) · [💬 Discord](https://discord.gg/nexusai) · [🗺️ Roadmap](https://github.com/prajitdatta/nexusai/projects/1)
 
 </div>
 
@@ -88,7 +88,7 @@ docker run -d \
   -p 19000:19000 \
   -v ~/.nexusai:/root/.nexusai \
   --name nexusai \
-  ghcr.io/yourusername/nexusai:latest
+  ghcr.io/prajitdatta/nexusai:latest
 ```
 
 Full Docker guide → [docs.nexusai.dev/install/docker](https://docs.nexusai.dev/install/docker)
@@ -96,7 +96,7 @@ Full Docker guide → [docs.nexusai.dev/install/docker](https://docs.nexusai.dev
 ### Build from Source
 
 ```bash
-git clone https://github.com/yourusername/nexusai.git
+git clone https://github.com/prajitdatta/nexusai.git
 cd nexusai
 
 pnpm install
@@ -339,8 +339,8 @@ Full configuration reference → [docs.nexusai.dev/configuration](https://docs.n
 | Self-Hosting on Linux | [docs.nexusai.dev/platforms/linux](https://docs.nexusai.dev/platforms/linux) |
 | Docker Deployment | [docs.nexusai.dev/install/docker](https://docs.nexusai.dev/install/docker) |
 | Troubleshooting | [docs.nexusai.dev/troubleshooting](https://docs.nexusai.dev/troubleshooting) |
-| Contributing Guide | [CONTRIBUTING.md](https://github.com/yourusername/nexusai/blob/main/CONTRIBUTING.md) |
-| Changelog | [CHANGELOG.md](https://github.com/yourusername/nexusai/blob/main/CHANGELOG.md) |
+| Contributing Guide | [CONTRIBUTING.md](https://github.com/prajitdatta/nexusai/blob/main/CONTRIBUTING.md) |
+| Changelog | [CHANGELOG.md](https://github.com/prajitdatta/nexusai/blob/main/CHANGELOG.md) |
 
 ---
 
@@ -369,7 +369,7 @@ Contributions are warmly welcome! Whether it's bug fixes, new channel integratio
 3. Commit your changes: `git commit -m 'feat: add Notion channel'`
 4. Push and open a Pull Request
 
-Please read [CONTRIBUTING.md](https://github.com/yourusername/nexusai/blob/main/CONTRIBUTING.md) for guidelines, code style, and how to run tests.
+Please read [CONTRIBUTING.md](https://github.com/prajitdatta/nexusai/blob/main/CONTRIBUTING.md) for guidelines, code style, and how to run tests.
 
 AI-assisted PRs are welcome! 🤖
 
@@ -377,23 +377,23 @@ AI-assisted PRs are welcome! 🤖
 
 ## 📜 License
 
-NexusAI is open source under the [MIT License](https://github.com/yourusername/nexusai/blob/main/LICENSE).
+NexusAI is open source under the [MIT License](https://github.com/prajitdatta/nexusai/blob/main/LICENSE).
 
 ---
 
 ## 💙 Community & Support
 
-- **Discord:** [discord.gg/nexusai](https://discord.gg/nexusai) — chat with the community, get help, share what you're building
-- **GitHub Discussions:** [github.com/yourusername/nexusai/discussions](https://github.com/yourusername/nexusai/discussions)
-- **GitHub Issues:** [github.com/yourusername/nexusai/issues](https://github.com/yourusername/nexusai/issues) — bug reports and feature requests
-- **Twitter/X:** [@nexusai_dev](https://x.com/nexusai_dev)
+- **GitHub Discussions:** [github.com/prajitdatta/nexusai/discussions](https://github.com/prajitdatta/nexusai/discussions)
+- **GitHub Issues:** [github.com/prajitdatta/nexusai/issues](https://github.com/prajitdatta/nexusai/issues) — bug reports and feature requests
 
 ---
 
+
 <div align="center">
 
-Built with ❤️ by the NexusAI community.
+**Built by [Prajit Datta](https://prajitdatta.github.io/) | *MIT License***
 
-If NexusAI saves you time, consider giving it a ⭐ — it helps others find the project!
+[![GitHub](https://img.shields.io/badge/GitHub-prajitdatta-181717?style=for-the-badge&logo=github)](https://github.com/prajitdatta)&nbsp;&nbsp;
+[![Portfolio](https://img.shields.io/badge/Portfolio-prajitdatta.github.io-4F46E5?style=for-the-badge&logo=google-chrome&logoColor=white)](https://prajitdatta.github.io/)
 
 </div>
