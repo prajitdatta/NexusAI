@@ -1,0 +1,71 @@
+{
+  "name": "nexusai-assistant",
+  "version": "0.1.0",
+  "description": "Your omnipresent self-hosted AI assistant — one brain, every channel",
+  "type": "module",
+  "bin": {
+    "nexusai": "./dist/cli/index.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "dev": "tsx watch src/cli/index.ts",
+    "gateway": "tsx src/cli/index.ts gateway",
+    "gateway:watch": "tsx watch src/gateway/server.ts",
+    "start": "node dist/cli/index.js",
+    "lint": "eslint src --ext .ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.0.0",
+    "conf": "^13.0.0",
+    "dotenv": "^16.4.5",
+    "eventsource": "^3.0.2",
+    "inquirer": "^9.3.7",
+    "node-fetch": "^3.3.2",
+    "ora": "^8.0.1",
+    "ws": "^8.17.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "@types/ws": "^8.5.10",
+    "@types/inquirer": "^9.0.7",
+    "typescript": "^5.4.5",
+    "tsx": "^4.15.6",
+    "vitest": "^1.6.0",
+    "eslint": "^9.4.0"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": [
+    "ai",
+    "assistant",
+    "self-hosted",
+    "whatsapp",
+    "telegram",
+    "discord",
+    "slack",
+    "llm",
+    "claude",
+    "chatgpt",
+    "gateway",
+    "multi-channel"
+  ],
+  "author": "NexusAI Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/nexusai.git"
+  },
+  "homepage": "https://nexusai.dev",
+  "bugs": {
+    "url": "https://github.com/yourusername/nexusai/issues"
+  }
+}

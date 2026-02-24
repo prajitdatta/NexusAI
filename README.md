@@ -1,0 +1,399 @@
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/sindresorhus/awesome/main/media/logo.svg" width="80" alt="NexusAI Logo"/>
+
+# 🧠 NexusAI — Your Omnipresent AI Assistant
+
+**One brain. Every channel. Zero friction.**
+
+Run your own private AI assistant that lives everywhere you do — WhatsApp, Telegram, Slack, Discord, SMS, email, and more. Powered by Claude, ChatGPT, or any LLM. Open source. Self-hosted. Yours.
+
+[![CI Status](https://img.shields.io/github/actions/workflow/status/yourusername/nexusai/ci.yml?branch=main&style=for-the-badge&label=CI)](https://github.com/yourusername/nexusai/actions)
+[![npm version](https://img.shields.io/npm/v/nexusai-assistant?style=for-the-badge&color=blue)](https://www.npmjs.com/package/nexusai-assistant)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://github.com/yourusername/nexusai/blob/main/LICENSE)
+[![Discord](https://img.shields.io/discord/1234567890?label=Discord&logo=discord&style=for-the-badge&color=5865F2)](https://discord.gg/nexusai)
+[![Stars](https://img.shields.io/github/stars/yourusername/nexusai?style=for-the-badge&color=yellow)](https://github.com/yourusername/nexusai/stargazers)
+
+[🌐 Website](https://nexusai.dev) · [📖 Docs](https://docs.nexusai.dev) · [🚀 Quick Start](https://docs.nexusai.dev/getting-started) · [💬 Discord](https://discord.gg/nexusai) · [🗺️ Roadmap](https://github.com/yourusername/nexusai/projects/1)
+
+</div>
+
+---
+
+## What is NexusAI?
+
+**NexusAI** is a self-hosted, open-source AI assistant gateway that connects any large language model to every messaging platform and productivity tool you already use. No more switching between chat apps just to talk to your AI — NexusAI puts it everywhere.
+
+You run a lightweight **Gateway** on your own machine or server. From that single control plane, your AI assistant becomes reachable on WhatsApp, Telegram, Slack, Discord, SMS, email, and more — all simultaneously, all with a single identity and persistent memory.
+
+> *Think of it like having your own personal AI employee who has a seat in every room you're already in.*
+
+---
+
+## ✨ Key Features
+
+| Feature | Description |
+|---|---|
+| 🔌 **Multi-Channel Inbox** | WhatsApp, Telegram, Slack, Discord, SMS, Email, and more |
+| 🧠 **Any LLM Backend** | Claude, GPT-4o, Gemini, Mistral, local Ollama — your choice |
+| 🔒 **Privacy First** | Self-hosted, your data never leaves your infrastructure |
+| 🗣️ **Voice Support** | Always-on wake word + push-to-talk on macOS, iOS & Android |
+| 🤖 **Multi-Agent Routing** | Route different channels to different AI agents/personas |
+| 🛠️ **Extensible Skills** | Plugin system for calendar, email, browser control, and more |
+| 📅 **Automation & Cron** | Schedule tasks, set reminders, trigger webhooks |
+| 🖥️ **Live Canvas** | Agent-driven visual workspace rendered in real time |
+| 📱 **Companion Apps** | macOS menu bar, iOS & Android native nodes |
+| 🐳 **Docker Ready** | One-command deployment with full sandboxing support |
+
+---
+
+## 🚀 Quick Start
+
+**Requirements:** Node.js ≥ 22, npm or pnpm
+
+```bash
+# Install globally
+npm install -g nexusai-assistant@latest
+
+# Run the interactive setup wizard
+nexusai onboard --install-daemon
+```
+
+The wizard walks you through:
+1. Choosing your AI provider (Anthropic, OpenAI, local Ollama, etc.)
+2. Connecting your first messaging channel
+3. Installing the Gateway as a background daemon
+4. Pairing your first device
+
+Full guide → [docs.nexusai.dev/getting-started](https://docs.nexusai.dev/getting-started)
+
+---
+
+## 📦 Installation Options
+
+### npm / pnpm (recommended)
+
+```bash
+npm install -g nexusai-assistant@latest
+# or
+pnpm add -g nexusai-assistant@latest
+
+nexusai onboard --install-daemon
+```
+
+### Docker
+
+```bash
+docker run -d \
+  -p 19000:19000 \
+  -v ~/.nexusai:/root/.nexusai \
+  --name nexusai \
+  ghcr.io/yourusername/nexusai:latest
+```
+
+Full Docker guide → [docs.nexusai.dev/install/docker](https://docs.nexusai.dev/install/docker)
+
+### Build from Source
+
+```bash
+git clone https://github.com/yourusername/nexusai.git
+cd nexusai
+
+pnpm install
+pnpm build
+
+nexusai onboard --install-daemon
+
+# Dev mode with hot reload
+pnpm gateway:watch
+```
+
+---
+
+## 🗺️ How It Works
+
+```
+WhatsApp · Telegram · Slack · Discord · SMS · Email · WebChat
+                            │
+                            ▼
+          ┌─────────────────────────────────┐
+          │           NexusAI Gateway        │
+          │         (your control plane)     │
+          │       ws://127.0.0.1:19000       │
+          └──────────────┬──────────────────┘
+                         │
+          ┌──────────────┼──────────────────┐
+          │              │                  │
+     AI Agent        CLI Tools         Web Dashboard
+  (Claude/GPT/etc)  (nexusai ...)    (localhost:19000)
+          │
+  ┌───────┴────────┐
+  │                │
+macOS App    iOS/Android Nodes
+```
+
+---
+
+## 🔗 Supported Channels
+
+### Core (built-in)
+
+| Channel | Status | Notes |
+|---|---|---|
+| [WhatsApp](https://docs.nexusai.dev/channels/whatsapp) | ✅ Stable | Via Baileys (no business account needed) |
+| [Telegram](https://docs.nexusai.dev/channels/telegram) | ✅ Stable | Bot API via grammY |
+| [Slack](https://docs.nexusai.dev/channels/slack) | ✅ Stable | Socket Mode via Bolt |
+| [Discord](https://docs.nexusai.dev/channels/discord) | ✅ Stable | discord.js, slash commands |
+| [SMS](https://docs.nexusai.dev/channels/sms) | ✅ Stable | Twilio or Signal |
+| [Email](https://docs.nexusai.dev/channels/email) | ✅ Stable | Gmail Pub/Sub or SMTP/IMAP |
+| [WebChat](https://docs.nexusai.dev/channels/webchat) | ✅ Stable | Embeddable widget |
+
+### Extension (community)
+
+| Channel | Status |
+|---|---|
+| [Microsoft Teams](https://docs.nexusai.dev/channels/msteams) | 🧪 Beta |
+| [Matrix](https://docs.nexusai.dev/channels/matrix) | 🧪 Beta |
+| [iMessage via BlueBubbles](https://docs.nexusai.dev/channels/bluebubbles) | 🧪 Beta |
+| [Google Chat](https://docs.nexusai.dev/channels/googlechat) | 🧪 Beta |
+| [Notion](https://docs.nexusai.dev/channels/notion) | 🚧 Planned |
+| [Linear](https://docs.nexusai.dev/channels/linear) | 🚧 Planned |
+
+---
+
+## 🤖 Supported AI Models
+
+NexusAI works with any OpenAI-compatible API. Recommended:
+
+```jsonc
+// ~/.nexusai/nexusai.json
+{
+  "agent": {
+    "model": "anthropic/claude-opus-4-6"   // recommended
+  }
+}
+```
+
+| Provider | Models | Notes |
+|---|---|---|
+| [Anthropic](https://www.anthropic.com) | Claude Opus 4.6, Sonnet 4.6, Haiku 4.5 | **Recommended** — best long-context + safety |
+| [OpenAI](https://openai.com) | GPT-4o, GPT-4 Turbo, o3 | Full support |
+| [Google](https://ai.google.dev) | Gemini 1.5 Pro, Gemini Flash | Via API |
+| [Mistral](https://mistral.ai) | Mistral Large, Codestral | Self-hostable |
+| [Ollama](https://ollama.ai) | Llama 3, Phi-3, Mistral, any GGUF | 100% local |
+
+Full model guide → [docs.nexusai.dev/concepts/models](https://docs.nexusai.dev/concepts/models)
+
+---
+
+## ⚡ CLI Reference
+
+```bash
+# Start the gateway
+nexusai gateway --port 19000 --verbose
+
+# Send a message to any channel
+nexusai message send --to +1234567890 --channel whatsapp --text "Hello from NexusAI"
+
+# Run the AI agent directly
+nexusai agent --message "Summarize my unread emails" --thinking high
+
+# Pair a new device or channel
+nexusai channels login
+
+# Approve a new user
+nexusai pairing approve telegram abc123
+
+# Health check & diagnostics
+nexusai doctor
+
+# Update to latest version
+nexusai update --channel stable
+```
+
+---
+
+## 💬 In-Chat Commands
+
+Send these directly in any connected chat (WhatsApp, Telegram, Slack, etc.):
+
+| Command | Description |
+|---|---|
+| `/status` | Show session info: model, tokens, cost |
+| `/new` or `/reset` | Start a fresh conversation |
+| `/compact` | Summarize and compress context window |
+| `/think <level>` | Set reasoning depth: `off`, `low`, `medium`, `high`, `max` |
+| `/verbose on\|off` | Toggle verbose tool output |
+| `/model <name>` | Switch the AI model mid-conversation |
+| `/usage off\|tokens\|full` | Toggle per-response usage footer |
+| `/help` | Show all available commands |
+
+---
+
+## 🛠️ Skills & Plugins
+
+NexusAI has a plugin system called **Skills**. Install from the community hub or write your own.
+
+```bash
+# Browse and install skills
+nexusai skills search "calendar"
+nexusai skills install nexusai-skill-gcal
+
+# List installed skills
+nexusai skills list
+```
+
+### Built-in Skills
+
+| Skill | Description |
+|---|---|
+| `browser` | Full web browsing via Playwright |
+| `calendar` | Google Calendar read/write |
+| `email` | Gmail read/compose/send |
+| `code` | Execute code in a sandboxed environment |
+| `memory` | Long-term vector memory across conversations |
+| `search` | Web search via Brave or SerpAPI |
+| `files` | Read/write files on the host machine |
+| `cron` | Schedule recurring tasks |
+
+Full skills reference → [docs.nexusai.dev/skills](https://docs.nexusai.dev/skills)
+
+---
+
+## 🔒 Security Model
+
+NexusAI connects to **real messaging surfaces** — treat all inbound messages as untrusted input.
+
+**Defaults:**
+- All new senders receive a pairing challenge and are blocked until approved
+- Approve senders: `nexusai pairing approve <channel> <code>`
+- Set `dmPolicy: "open"` only if you intentionally want public access
+- Non-main sessions (groups, channels) run inside isolated Docker sandboxes by default
+
+**Exposure options:**
+- `gateway.bind: "loopback"` — local only (default, most secure)
+- Tailscale Serve — tailnet-only HTTPS
+- Tailscale Funnel — public HTTPS (requires password auth)
+- SSH tunnel — manual port forwarding
+
+Full security guide → [docs.nexusai.dev/security](https://docs.nexusai.dev/security)
+
+---
+
+## 🖥️ Platform Support
+
+| Platform | Status | Notes |
+|---|---|---|
+| macOS (ARM + Intel) | ✅ Full | Menu bar app, Voice Wake, native notifications |
+| Linux (x64, ARM) | ✅ Full | Systemd daemon, headless |
+| Windows (WSL2) | ✅ Full | Strongly recommended over native |
+| iOS | ✅ Node | Canvas, voice, camera via companion app |
+| Android | ✅ Node | Canvas, voice, camera via companion app |
+| Docker / Kubernetes | ✅ Full | Recommended for server deployments |
+| Raspberry Pi | ✅ Full | ARMv7 + ARM64 |
+
+---
+
+## ⚙️ Configuration
+
+Minimal `~/.nexusai/nexusai.json`:
+
+```jsonc
+{
+  "agent": {
+    "model": "anthropic/claude-opus-4-6"
+  },
+  "channels": {
+    "telegram": {
+      "botToken": "YOUR_BOT_TOKEN"
+    },
+    "discord": {
+      "token": "YOUR_DISCORD_BOT_TOKEN"
+    },
+    "whatsapp": {
+      "allowFrom": ["+1234567890"]
+    }
+  },
+  "gateway": {
+    "port": 19000,
+    "bind": "loopback"
+  }
+}
+```
+
+Full configuration reference → [docs.nexusai.dev/configuration](https://docs.nexusai.dev/configuration)
+
+---
+
+## 📖 Documentation
+
+| Resource | Link |
+|---|---|
+| Getting Started | [docs.nexusai.dev/getting-started](https://docs.nexusai.dev/getting-started) |
+| Architecture Overview | [docs.nexusai.dev/architecture](https://docs.nexusai.dev/architecture) |
+| Channel Setup Guides | [docs.nexusai.dev/channels](https://docs.nexusai.dev/channels) |
+| Skills & Plugins | [docs.nexusai.dev/skills](https://docs.nexusai.dev/skills) |
+| Configuration Reference | [docs.nexusai.dev/configuration](https://docs.nexusai.dev/configuration) |
+| Security Guide | [docs.nexusai.dev/security](https://docs.nexusai.dev/security) |
+| API Reference | [docs.nexusai.dev/api](https://docs.nexusai.dev/api) |
+| Self-Hosting on Linux | [docs.nexusai.dev/platforms/linux](https://docs.nexusai.dev/platforms/linux) |
+| Docker Deployment | [docs.nexusai.dev/install/docker](https://docs.nexusai.dev/install/docker) |
+| Troubleshooting | [docs.nexusai.dev/troubleshooting](https://docs.nexusai.dev/troubleshooting) |
+| Contributing Guide | [CONTRIBUTING.md](https://github.com/yourusername/nexusai/blob/main/CONTRIBUTING.md) |
+| Changelog | [CHANGELOG.md](https://github.com/yourusername/nexusai/blob/main/CHANGELOG.md) |
+
+---
+
+## 🚦 Development Channels
+
+| Channel | npm tag | Description |
+|---|---|---|
+| `stable` | `latest` | Tagged releases — production ready |
+| `beta` | `beta` | Pre-release builds — new features |
+| `dev` | `dev` | HEAD of `main` — bleeding edge |
+
+Switch channels:
+
+```bash
+nexusai update --channel beta
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are warmly welcome! Whether it's bug fixes, new channel integrations, skill plugins, or documentation — all PRs are reviewed.
+
+1. Fork the repo
+2. Create a feature branch: `git checkout -b feat/my-new-channel`
+3. Commit your changes: `git commit -m 'feat: add Notion channel'`
+4. Push and open a Pull Request
+
+Please read [CONTRIBUTING.md](https://github.com/yourusername/nexusai/blob/main/CONTRIBUTING.md) for guidelines, code style, and how to run tests.
+
+AI-assisted PRs are welcome! 🤖
+
+---
+
+## 📜 License
+
+NexusAI is open source under the [MIT License](https://github.com/yourusername/nexusai/blob/main/LICENSE).
+
+---
+
+## 💙 Community & Support
+
+- **Discord:** [discord.gg/nexusai](https://discord.gg/nexusai) — chat with the community, get help, share what you're building
+- **GitHub Discussions:** [github.com/yourusername/nexusai/discussions](https://github.com/yourusername/nexusai/discussions)
+- **GitHub Issues:** [github.com/yourusername/nexusai/issues](https://github.com/yourusername/nexusai/issues) — bug reports and feature requests
+- **Twitter/X:** [@nexusai_dev](https://x.com/nexusai_dev)
+
+---
+
+<div align="center">
+
+Built with ❤️ by the NexusAI community.
+
+If NexusAI saves you time, consider giving it a ⭐ — it helps others find the project!
+
+</div>

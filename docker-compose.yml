@@ -1,0 +1,34 @@
+version: "3.9"
+
+services:
+  nexusai:
+    image: ghcr.io/yourusername/nexusai:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nexusai
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:19000:19000"   # Gateway control port
+      - "127.0.0.1:19001:19001"   # WebChat UI
+    volumes:
+      - nexusai-data:/root/.nexusai
+      - ./nexusai.json:/root/.nexusai/nexusai.json:ro
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - DISCORD_BOT_TOKEN=${DISCORD_BOT_TOKEN}
+      - SLACK_BOT_TOKEN=${SLACK_BOT_TOKEN}
+      - SLACK_APP_TOKEN=${SLACK_APP_TOKEN}
+      - NODE_ENV=production
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:19001/').catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+
+volumes:
+  nexusai-data:
+    driver: local
