@@ -113,9 +113,9 @@ WhatsApp · Telegram · Slack · Discord · SMS · Email · WebChat
                             │
                             ▼
           ┌─────────────────────────────────┐
-          │           NexusAI Gateway        │
-          │         (your control plane)     │
-          │       ws://127.0.0.1:19000       │
+          │           NexusAI Gateway       │
+          │         (your control plane)    │
+          │       ws://127.0.0.1:19000      │
           └──────────────┬──────────────────┘
                          │
           ┌──────────────┼──────────────────┐
