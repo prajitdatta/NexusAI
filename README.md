@@ -1,6 +1,5 @@
 <div align="center">
 
-
 # 🧠 NexusAI — Your Omnipresent AI Assistant
 
 **One brain. Every channel. Zero friction.**
