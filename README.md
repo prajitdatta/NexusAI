@@ -3,7 +3,7 @@
 
 # 🧠 NexusAI — Your Omnipresent AI Assistant
 
-**One brain. Every channel. Zero friction.**
+**One brain. Every channel. Zero friction**
 
 Run your own private AI assistant that lives everywhere you do — WhatsApp, Telegram, Slack, Discord, SMS, email, and more. Powered by Claude, ChatGPT, or any LLM. Open source. Self-hosted. Yours.
 
